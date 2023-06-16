@@ -9,4 +9,15 @@ const fauna = connector.GraphQL({
 
 g.datasource(fauna, { namespace: 'Fauna' })
 
-export default config({ schema: g })
+export default config({
+  schema: g,
+  cache: {
+    rules: [
+      {
+        types: ['FaunaQuery'],
+        maxAge: 60,
+        staleWhileRevalidate: 60
+      }
+    ]
+  }
+})

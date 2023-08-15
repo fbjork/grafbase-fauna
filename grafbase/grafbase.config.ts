@@ -15,8 +15,8 @@ export default config({
     rules: [
       {
         types: ['FaunaQuery'],
-        maxAge: 60,
-        staleWhileRevalidate: 60
+        maxAge: 120,
+        staleWhileRevalidate: 120
       }
     ]
   }

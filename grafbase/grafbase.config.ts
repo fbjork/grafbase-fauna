@@ -14,7 +14,7 @@ export default config({
   cache: {
     rules: [
       {
-        types: ['FaunaQuery'],
+        types: ['Query'],
         maxAge: 120,
         staleWhileRevalidate: 120
       }
